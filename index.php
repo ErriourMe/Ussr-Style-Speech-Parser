@@ -14,6 +14,7 @@ try {
     $result = $parser->getStrings();
 } catch (Exception $e) {
     echo $e->getMessage();
+    die;
 }
 
 $inserts = mb_substr(str_repeat('(?), ', count($result)), 0, -2);
